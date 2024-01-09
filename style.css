@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "FigtreeExtraBold";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "FigtreeSemiBold";
+  src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "FigtreeLightItalic";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "FigtreeLight";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+:root {
+  --Yellow-: hsl(47, 88%, 63%);
+  --White-: hsl(0, 0%, 100%);
+  --Grey-: hsl(0, 0%, 50%);
+  --Black-: hsl(0, 0%, 7%);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Yellow-);
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  width: 26%;
+  height: 78%;
+  background-color: var(--White-);
+  border: 1.5px solid --Black-;
+  border-radius: 15px;
+  filter: drop-shadow(7px 7px 0px black);
+}
+
+.sub-container img {
+  border-radius: 10px;
+}
+
+.sub-container .published {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--Black-);
+}
+.sub-container h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "FigtreeExtraBold";
+  transition: all 0.3s ease-in-out;
+}
+.sub-container h3:hover {
+  color: var(--Yellow-);
+}
+.sub-container p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #acacac;
+  margin-bottom: 10px;
+  font-family: "FigtreeSemiBold";
+}
+
+.sub-container .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+.sub-container .row img {
+  width: 35px;
+  margin-right: 15px;
+}
+.sub-container .row p {
+  color: black;
+  font-weight: 900;
+  font-size: 15px;
+  margin: 0;
+  font-family: "FigtreeExtraBold";
+}
+.sub-container button {
+  font-family: "FigtreeExtraBold";
+  background-color: #f5d04e;
+  width: 30%;
+  height: 7%;
+  font-size: 16px;
+  /* font-weight: 900; */
+  border: none;
+  border-radius: 5px;
+  margin-block: 15px;
+}
+
+@media (max-width: 375px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sub-container {
+    width: 90%;
+    height: 85%;
+    padding: 20px;
+  }
+
+  .sub-container p {
+    font-size: 15px;
+    /* margin-block: 15px; */
+  }
+}
